@@ -738,54 +738,60 @@ a{text-decoration:none;color:inherit}
   }
 
   .footer {
-    padding: 5rem 0 3rem; /* Extra breathing room at the top */
+    padding: 3rem 0 2rem; /* Slashed the heavy padding */
   }
 
   .footer-top {
     flex-direction: column;
-    align-items: center; /* Dead-center all elements */
+    align-items: center; 
     text-align: center;
-    gap: 3.5rem; /* Generous gap between branding and links */
+    gap: 1.5rem; /* Tightened the gap between logo and links */
   }
 
   .footer-logo {
-    margin: 0 auto 1rem; /* Center the circle logo */
+    margin: 0 auto;
+    width: 80px; /* Scaled down the logo size for mobile */
+    height: 80px;
   }
 
+  /* Force headers and links into a single, short horizontal row */
   .footer-links {
-    flex-direction: column; /* Stack link columns vertically */
-    align-items: center;
-    gap: 2.5rem; /* Space out the columns cleanly */
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    flex-wrap: wrap; /* Wraps cleanly if you have too many links */
+    gap: 1.5rem; 
     width: 100%;
   }
 
-  .footer-col {
-    align-items: center; /* Center links inside each column */
-    gap: 0.8rem; /* Make room between link rows for easy tapping */
+  /* Hide the column titles (h5) completely on mobile to save vertical space */
+  .footer-col h5 {
+    display: none; 
   }
 
-  .footer-col h5 {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    margin-bottom: 0.6rem;
+  .footer-col {
+    flex-direction: row;
+    gap: 1.5rem;
   }
 
   .footer-col a {
-    font-size: 0.92rem; /* Slipped up slightly for easier readability on mobile */
-    padding: 0.3rem 0; /* Creates an invisible vertical hit-box for thumb taps */
-    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
   }
 
+  /* Shrunk the divider spacing */
   .footer-bar {
-    margin: 2.5rem 0;
-    opacity: 0.5;
+    margin: 1.5rem 0;
+    opacity: 0.3;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 1.2rem;
+    gap: 0.5rem;
+    font-size: 0.75rem;
   }
+}
 }
 
 @media(max-width:480px){
