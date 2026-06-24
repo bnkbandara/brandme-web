@@ -73,11 +73,43 @@ a{text-decoration:none;color:inherit}
 .hero-h1 em{font-style:italic;color:var(--gold);display:block}
 .hero-sub{font-size:1.02rem;color:#aaa09a;max-width:520px;margin:0 auto 2.4rem;line-height:1.85;animation:fadeUp .9s .4s ease both}
 /* Adjusted margin-bottom to 0 so there isn't an awkward layout gap before the scroll hint */
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:0;animation:fadeUp .9s .5s ease both}
-.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:2;animation:fadeUp 1s 1s ease both}
-.scroll-hint span{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dk)}
-.scroll-line{width:1px;height:38px;background:linear-gradient(180deg,var(--gold),transparent);animation:pulse 2s ease-in-out infinite}
+/* Changed margin-bottom to create a clean gap before the scroll hint */
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem; 
+  animation: fadeUp .9s .5s ease both;
+}
 
+/* REMOVED absolute positioning so it flows naturally under the buttons */
+.scroll-hint {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  z-index: 2;
+  animation: fadeUp 1s 1s ease both;
+}
+
+.scroll-hint span {
+  font-size: .62rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+}
+
+/* Added a small margin-bottom to give the stats banner below it some breathing room */
+.scroll-line {
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: pulse 2s ease-in-out infinite;
+  margin-bottom: 2rem; 
+}
 /* ─── STATS BANNER ───────────────────────────────── */
 .stats-banner{
   padding:0;
@@ -635,18 +667,11 @@ a{text-decoration:none;color:inherit}
     margin-bottom:2.5rem;
   }
 
-  .hero-stats{
-    gap:1rem;
-    flex-wrap:wrap;
-  }
 
   .hstat-sep{
     display:none;
   }
 
-  .hstat-n{
-    font-size:1.7rem;
-  }
 
   /* Sections */
 
