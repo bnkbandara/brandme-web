@@ -72,13 +72,8 @@ a{text-decoration:none;color:inherit}
 .hero-h1{font-family:var(--serif);font-size:clamp(3.2rem,7.5vw,6rem);font-weight:700;line-height:1.08;color:var(--cream);margin-bottom:1.6rem;animation:fadeUp .9s .3s ease both}
 .hero-h1 em{font-style:italic;color:var(--gold);display:block}
 .hero-sub{font-size:1.02rem;color:#aaa09a;max-width:520px;margin:0 auto 2.4rem;line-height:1.85;animation:fadeUp .9s .4s ease both}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem;animation:fadeUp .9s .5s ease both}
-.hero-divider2{width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:.8rem auto 2rem;animation:fadeUp .8s .55s ease both}
-.hero-stats{display:flex;align-items:center;justify-content:center;gap:3rem;animation:fadeUp .9s .6s ease both}
-.hstat{text-align:center}
-.hstat-n{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
-.hstat-l{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
-.hstat-sep{width:1px;height:44px;background:rgba(255,255,255,.1)}
+/* Adjusted margin-bottom to 0 so there isn't an awkward layout gap before the scroll hint */
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:0;animation:fadeUp .9s .5s ease both}
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:2;animation:fadeUp 1s 1s ease both}
 .scroll-hint span{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dk)}
 .scroll-line{width:1px;height:38px;background:linear-gradient(180deg,var(--gold),transparent);animation:pulse 2s ease-in-out infinite}
