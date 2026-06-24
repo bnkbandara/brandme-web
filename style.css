@@ -110,6 +110,7 @@ a{text-decoration:none;color:inherit}
   animation: pulse 2s ease-in-out infinite;
   margin-bottom: 2rem; 
 }
+
 /* ─── STATS BANNER ───────────────────────────────── */
 .stats-banner{
   padding:0;
@@ -560,6 +561,7 @@ a{text-decoration:none;color:inherit}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
 /* ─── RESPONSIVE ─────────────────────────────────── */
+
 /* ─── RESPONSIVE ─────────────────────────────────── */
 
 @media(max-width:1024px){
@@ -735,18 +737,62 @@ a{text-decoration:none;color:inherit}
     word-break:break-word;
   }
 
-  .footer-top{
-    flex-direction:column;
+  .footer {
+    padding: 5rem 0 3rem; /* Extra breathing room at the top */
   }
 
-  .footer-links{
-    flex-direction:column;
-    gap:1.5rem;
+  .footer-top {
+    flex-direction: column;
+    align-items: center; /* Dead-center all elements */
+    text-align: center;
+    gap: 3.5rem; /* Generous gap between branding and links */
   }
 
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
+  .footer-logo {
+    margin: 0 auto 1rem; /* Center the circle logo */
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack link columns vertically */
+    align-items: center;
+    gap: 2.5rem; /* Space out the columns cleanly */
+    width: 100%;
+  }
+
+  .footer-col {
+    align-items: center; /* Center links inside each column */
+    gap: 0.8rem; /* Make room between link rows for easy tapping */
+  }
+
+  .footer-col h5 {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-col a {
+    font-size: 0.92rem; /* Slipped up slightly for easier readability on mobile */
+    padding: 0.3rem 0; /* Creates an invisible vertical hit-box for thumb taps */
+    display: inline-block;
+  }
+
+  .footer-bar {
+    margin: 2.5rem 0;
+    opacity: 0.5;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
+}
+
+@media(max-width:480px){
+  /* Locate and fix this tiny section inside your 480px block too */
+  .footer-links {
+    flex-direction: column; /* Safeguard to ensure full stacking on micro-displays */
+    gap: 2.5rem;
   }
 }
 
