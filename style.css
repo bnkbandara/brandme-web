@@ -792,7 +792,7 @@ a{text-decoration:none;color:inherit}
     font-size: 0.75rem;
   }
 }
-}
+
 
 @media(max-width:480px){
   /* Locate and fix this tiny section inside your 480px block too */
@@ -923,5 +923,224 @@ a{text-decoration:none;color:inherit}
   *,*::before,*::after{
     animation-duration:.01ms!important;
     transition-duration:.01ms!important;
+  }
+}
+
+/* Social Follow Section Base Styling */
+.social-follow-section {
+  padding: 60px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+}
+
+/* Section Header Typography */
+.social-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+/* Flex Wrapper Layout */
+.social-links-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Interactive Card Layout */
+.social-link-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Icon Box Alignments */
+.social-link-item .icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.social-link-item svg {
+  display: block;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* --- Brand Hover Accent States --- */
+
+/* LinkedIn State */
+.social-link-item.linkedin:hover {
+  background: rgba(10, 102, 194, 0.1);
+  border-color: rgba(10, 102, 194, 0.4);
+  color: #0a66c2;
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.15);
+}
+
+/* Instagram State */
+.social-link-item.instagram:hover {
+  background: rgba(225, 48, 108, 0.08);
+  border-color: rgba(225, 48, 108, 0.4);
+  color: #e1306c;
+  box-shadow: 0 0 20px rgba(225, 48, 108, 0.15);
+}
+
+/* Facebook State */
+.social-link-item.facebook:hover {
+  background: rgba(24, 119, 242, 0.1);
+  border-color: rgba(24, 119, 242, 0.4);
+  color: #1877f2;
+  box-shadow: 0 0 20px rgba(24, 119, 242, 0.15);
+}
+
+/* Unified Hover Physics Changes */
+.social-link-item:hover {
+  transform: translateY(-4px);
+}
+
+.social-link-item:hover svg {
+  opacity: 1;
+}
+
+.social-link-item:hover .icon-box {
+  transform: scale(1.08);
+}
+
+.center-social-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Adjust spacing below your upper grid blocks */
+}
+
+.social-links-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Keeps responsive wrap solid on small mobile displays */
+}
+
+/* --- TRANSFORMATION SECTION (DARK THEME) --- */
+.transformation {
+  padding: 80px 0;
+  background-color: #000000; /* Pure black section background */
+}
+
+/* Matching the title elements to white text for dark theme visibility */
+.transformation .sec-title {
+  color: #ffffff;
+}
+
+.transformation .sec-sub {
+  color: #aaaaaa;
+}
+
+.tf-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.tf-card {
+  background: #111111; /* Sleek dark charcoal card background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border for definition */
+}
+
+.tf-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.tf-badge-before {
+  background-color: #e63946;
+  color: #ffffff;
+}
+
+.tf-badge-after {
+  background-color: #0077b5; /* LinkedIn brand blue */
+  color: #ffffff;
+}
+
+.tf-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #1a1a1a;
+}
+
+.tf-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.tf-card:hover .tf-img {
+  transform: scale(1.02);
+}
+
+.tf-content {
+  padding: 25px;
+}
+
+.tf-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff; /* Crisp white headers */
+  font-weight: 600;
+}
+
+.tf-content p {
+  font-size: 0.95rem;
+  color: #cccccc; /* Light gray body text for high readability */
+  line-height: 1.6;
+}
+
+/* --- RESPONSIVE DESKTOP MEDIA QUERY --- */
+@media (min-width: 768px) {
+  .tf-grid {
+    flex-direction: row;
+    gap: 40px;
+  }
+  
+  .tf-card {
+    flex: 1;
   }
 }
